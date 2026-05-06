@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link 
+    rel="preload" 
+    href="/fonts/poppins-v24-latin-200.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link 
+    rel="preload" 
+    href="/fonts/poppins-v24-latin-600.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+    <link 
+    rel="preload" 
+    href="/fonts/poppins-v24-latin-regular.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link rel="stylesheet" href="./styles.css" >
+  <title>Frontend Mentor | Four card feature section</title>
+</head>
+<body>
+  <main class="page">
+    <section class="page__intro">
+      <h1 class="intro__tagline">
+        Reliable, efficient delivery
+      </h1>
+      <h1 class="intro__support-tag">
+        Powered by Technology
+      </h1>
+      <p class="intro__details">
+        Our Artificial Intelligence powered tools use millions 
+        of project data points to ensure that your project is successful
+      </p>
+    </section>
+    <section class="page__features">
+      <ul class="features__cards">
+        <li class="card card--cyan card__supervisor">
+          <div class="card__container">
+            <h1 class="card__name">
+              Supervisor
+            </h1>
+            <p class="card__details">
+              Monitors activity to identify project roadblocks
+            </p>
+            <img class="card__image" width="64" height="64" src="./images/icon-supervisor.svg" alt="">
+          </div>
+        </li>
+        <li class="card card--red card__team-builder">
+          <div class="card__container">
+            <h1 class="card__name">
+              Team Builder
+            </h1>
+            <p class="card__details">
+              Scans our talent network to create the optimal 
+              team for your project
+            </p>
+            <img 
+              class="card__image" 
+              width="64" 
+              height="64" 
+              src="./images/icon-team-builder.svg" alt=""
+              >
+            </div>
+        </li>
+        <li class="card card--orange card__karma">
+          <div class="card__container">
+            <h1 class="card__name">
+              Karma
+            </h1>
+            <p class="card__details">
+              Regularly evaluates our talent to ensure quality
+            </p>
+            <img 
+              class="card__image" 
+              width="64" 
+              height="64" 
+              src="./images/icon-karma.svg" 
+              alt=""
+            >
+          </div>
+        </li>
+        <li class="card card--blue card__calculator">
+          <div class="card__container">
+            <h1 class="card__name">
+              Calculator
+            </h1>
+            <p class="card__details">
+              Uses data from past projects to provide better delivery estimates
+            </p>
+            <img 
+              class="card__image" 
+              width="64" 
+              height="64" 
+              src="./images/icon-calculator.svg" 
+              alt=""
+            >
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Jeffrey Riazonda</a>.
+  </footer>
+</body>
+</html>

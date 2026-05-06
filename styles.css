@@ -1,0 +1,218 @@
+/* poppins-200 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 200;
+  src: url('./fonts/poppins-v24-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/poppins-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./fonts/poppins-v24-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+  /* Primary */
+
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  /* Neutral */
+  --Grey-500: hsl(234, 12%, 34%);
+  --Grey-400: hsl(212, 6%, 44%);
+  --White: hsl(0, 0%, 100%);
+}
+
+/* || RESET */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img,
+picture,
+video {
+  display: block;
+  max-inline-size: 100%;
+  block-size: auto;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border-color: transparent;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul,
+ol {
+  list-style-type: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.938rem;
+  min-height: 100svh;
+  background-color: var(--White);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(3rem, 1.592rem + 6.009vw, 7rem)
+    clamp(2rem, 0.592rem + 6.009vw, 6rem);
+  gap: 5rem;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.page__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro__tagline {
+  font-size: clamp(1.6rem, 1.371rem + 0.977vw, 2.25rem);
+  font-weight: 200;
+  color: var(--Grey-500);
+}
+
+.intro__support-tag {
+  font-size: clamp(1.6rem, 1.371rem + 0.977vw, 2.25rem);
+  font-weight: 600;
+  color: var(--Grey-500);
+}
+
+.intro__details {
+  text-align: center;
+  color: var(--Grey-500);
+  margin-block-start: 1rem;
+}
+
+.features__cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.25rem;
+}
+
+.card {
+  width: clamp(19.5rem, 18.796rem + 3.005vw, 21.5rem);
+  height: clamp(15.5rem, 16.852rem + -1.502vw, 16.5rem);
+  border-radius: 0.5rem;
+  padding-block-start: 4.5px;
+  box-shadow: 0px 2px 6px 0 var(--Grey-400);
+}
+
+.card--cyan {
+  background-color: var(--Cyan);
+}
+
+.card--red {
+  background-color: var(--Red);
+}
+
+.card--orange {
+  background-color: var(--Orange);
+}
+
+.card--blue {
+  background-color: var(--Blue);
+}
+
+.card__container {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: var(--White);
+}
+
+.card__name {
+  font-size: 1.4em;
+  color: var(--Grey-500);
+}
+
+.card__details {
+  font-size: 0.85em;
+  color: var(--Grey-400);
+}
+
+.card__image {
+  margin-block-start: 1.5rem;
+  align-self: flex-end;
+}
+
+.i .attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (width >= 48em) {
+  /* when viewport size is 768px and above */
+
+  .body {
+  }
+
+  .page {
+    align-items: center;
+  }
+
+  .page__intro {
+    width: 33rem;
+  }
+
+  .features__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .card__supervisor {
+    grid-area: 2 / 1 / 4 / 2;
+  }
+
+  .card__team-builder {
+    grid-area: 1 / 2 / 3 / 3;
+  }
+
+  .card__calculator {
+    grid-area: 2 / -2 / 4 / -1;
+  }
+
+  .card__karma {
+    grid-area: 3 / 2 / -1 / -2;
+  }
+}
+@media (width < 48em) {
+  /* when viewport size is below 768px */
+}
