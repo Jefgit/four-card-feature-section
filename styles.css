@@ -177,12 +177,8 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
-@media (width >= 48em) {
+@media (width >= 75em) {
   /* when viewport size is 768px and above */
-
-  .body {
-  }
-
   .page {
     align-items: center;
   }
@@ -193,8 +189,7 @@ body {
 
   .features__cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template: repeat(4, 1fr) / repeat(3, 1fr);
   }
 
   .card__supervisor {
@@ -213,6 +208,36 @@ body {
     grid-area: 3 / 2 / -1 / -2;
   }
 }
+
+@media (48em <= width < 75em) {
+  .features__cards {
+    display: grid;
+    justify-items: center;
+    grid-template: repeat(4, 1fr) / repeat(5, 1fr);
+    grid-auto-flow: row dense;
+  }
+
+  .card__supervisor {
+    grid-area: 1 / 1/ 2 / 4;
+    justify-self: right;
+  }
+
+  .card__team-builder {
+    grid-area: 2 / 3 / 3 / -1;
+    justify-self: left;
+  }
+
+  .card__karma {
+    grid-area: 3 / 1 / 4 / 4;
+    justify-self: right;
+  }
+
+  .card__calculator {
+    grid-area: 4 / 3 / 5 / -1;
+    justify-self: left;
+  }
+}
+
 @media (width < 48em) {
   /* when viewport size is below 768px */
 }
