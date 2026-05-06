@@ -156,6 +156,7 @@ body {
 
 .card__name {
   font-size: 1.4em;
+  font-weight: 600;
   color: var(--Grey-500);
 }
 
@@ -192,19 +193,19 @@ body {
     grid-template: repeat(4, 1fr) / repeat(3, 1fr);
   }
 
-  .card__supervisor {
+  .card-supervisor {
     grid-area: 2 / 1 / 4 / 2;
   }
 
-  .card__team-builder {
+  .card-team {
     grid-area: 1 / 2 / 3 / 3;
   }
 
-  .card__calculator {
+  .card-calculator {
     grid-area: 2 / -2 / 4 / -1;
   }
 
-  .card__karma {
+  .card-karma {
     grid-area: 3 / 2 / -1 / -2;
   }
 }
@@ -217,22 +218,22 @@ body {
     grid-auto-flow: row dense;
   }
 
-  .card__supervisor {
+  .card-supervisor {
     grid-area: 1 / 1/ 2 / 4;
     justify-self: right;
   }
 
-  .card__team-builder {
+  .card-team {
     grid-area: 2 / 3 / 3 / -1;
     justify-self: left;
   }
 
-  .card__karma {
+  .card-karma {
     grid-area: 3 / 1 / 4 / 4;
     justify-self: right;
   }
 
-  .card__calculator {
+  .card-calculator {
     grid-area: 4 / 3 / 5 / -1;
     justify-self: left;
   }
